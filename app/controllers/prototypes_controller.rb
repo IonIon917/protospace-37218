@@ -1,6 +1,6 @@
 class PrototypesController < ApplicationController
   before_action :authenticate_user!, expect:[:create, :edit, :destroy]
-  before_action :move_to_root, only: [:edit, :update, :destoroy]
+  before_action :move_to_root, only: [:edit, :update, :destroy]
 
   def index
     @prototypes = Prototype.all
